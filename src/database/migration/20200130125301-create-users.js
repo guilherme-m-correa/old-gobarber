@@ -7,7 +7,7 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      nome: {
+      name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -25,7 +25,7 @@ module.exports = {
         defaultValue: false,
         allowNull: false,
       },
-      create_at: {
+      created_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
