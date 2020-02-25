@@ -9,7 +9,7 @@ import ProviderController from './app/controllers/ProviderController';
 import AppoinmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
 import NotificationController from './app/controllers/NotificationController';
-
+import AvailableController from './app/controllers/AvailableController';
 import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
@@ -23,6 +23,7 @@ routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
 routes.get('/providers', ProviderController.index);
+routes.get('/providers/:providerId/available', AvailableController.index);
 
 routes.get('/appointments', AppoinmentController.index);
 routes.post('/appointments', AppoinmentController.store);
